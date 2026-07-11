@@ -78,8 +78,8 @@ export default function Home() {
               <div className="label">Solo PM case studies</div>
             </div>
             <div className="stat">
-              <div className="value">4</div>
-              <div className="label">Product &amp; data certifications</div>
+              <div className="value">5</div>
+              <div className="label">Product, data &amp; AI certifications</div>
             </div>
           </div>
         </div>

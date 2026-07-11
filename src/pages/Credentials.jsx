@@ -1,5 +1,10 @@
 const certifications = [
   {
+    title: "AI Fluency: Framework & Foundations",
+    org: "Anthropic",
+    year: "2026",
+  },
+  {
     title: "Product Management Certificate",
     org: "BrainStation",
     year: "2025",
