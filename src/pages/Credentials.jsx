@@ -1,5 +1,10 @@
 const certifications = [
   {
+    title: "NIST AI RMF: AI Risk Management & AI Governance",
+    org: "Udemy",
+    year: "2026",
+  },
+  {
     title: "AI Fluency: Framework & Foundations",
     org: "Anthropic",
     year: "2026",
