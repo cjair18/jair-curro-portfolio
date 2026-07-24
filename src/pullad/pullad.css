@@ -1,0 +1,335 @@
+/*
+ * Scoped styles for the embedded PullAd AI prototype.
+ * Adapted from the standalone repo's index.css: `:root` and `body` rules
+ * are re-homed onto `.pullad-scope`, every selector is prefixed so the
+ * demo's light theme can't leak into the dark portfolio (and vice versa),
+ * and the full-viewport heights are swapped for an embedded fixed height.
+ */
+
+.pullad-scope {
+  --color-bg: #f6f7fb;
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-user-bubble: #2563eb;
+  --color-user-bubble-text: #ffffff;
+  --color-assistant-bubble: #ffffff;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 1px rgba(15, 23, 42, 0.04);
+
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.4;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.pullad-scope button {
+  font-family: inherit;
+}
+
+/* ---------------------------------------------------------------- */
+/* App shell                                                        */
+/* ---------------------------------------------------------------- */
+
+.pullad-scope .app-shell {
+  display: flex;
+  flex-direction: column;
+}
+
+.pullad-scope .app-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.pullad-scope .app-header h1 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.pullad-scope .app-header p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.pullad-scope .app-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  padding: 16px;
+  min-height: 0;
+}
+
+@media (min-width: 860px) {
+  .pullad-scope .app-main {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding: 24px;
+    gap: 24px;
+    height: 620px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Chat panel                                                       */
+/* ---------------------------------------------------------------- */
+
+.pullad-scope .chat-panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  min-height: 420px;
+}
+
+@media (min-width: 860px) {
+  .pullad-scope .chat-panel {
+    min-height: 0;
+  }
+}
+
+.pullad-scope .chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pullad-scope .chat-welcome {
+  background: #eef2ff;
+  border: 1px solid #dbe4ff;
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.pullad-scope .chat-welcome-title {
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.pullad-scope .example-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pullad-scope .example-chips--inline {
+  margin-top: 10px;
+}
+
+.pullad-scope .example-chip {
+  text-align: left;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: var(--color-primary-dark);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.pullad-scope .example-chip:hover {
+  background: #eff6ff;
+  border-color: var(--color-primary);
+}
+
+.pullad-scope .chat-row {
+  display: flex;
+}
+
+.pullad-scope .chat-row--user {
+  justify-content: flex-end;
+}
+
+.pullad-scope .chat-row--assistant {
+  justify-content: flex-start;
+}
+
+.pullad-scope .chat-bubble {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.pullad-scope .chat-bubble p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.pullad-scope .chat-bubble--user {
+  background: var(--color-user-bubble);
+  color: var(--color-user-bubble-text);
+  border-bottom-right-radius: 4px;
+}
+
+.pullad-scope .chat-bubble--assistant {
+  background: #f1f3f9;
+  color: var(--color-text);
+  border-bottom-left-radius: 4px;
+}
+
+.pullad-scope .chat-bubble--thinking {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px;
+}
+
+.pullad-scope .thinking-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+  opacity: 0.6;
+  animation: pullad-thinking-bounce 1.1s infinite ease-in-out;
+}
+
+.pullad-scope .thinking-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.pullad-scope .thinking-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes pullad-thinking-bounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.pullad-scope .chat-input-row {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.pullad-scope .chat-input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  font-family: inherit;
+  background: var(--color-surface);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.pullad-scope .chat-input-row input:focus {
+  border-color: var(--color-primary);
+}
+
+.pullad-scope .chat-input-row input:disabled {
+  background: #f9fafb;
+  color: var(--color-text-muted);
+}
+
+.pullad-scope .chat-input-row button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.pullad-scope .chat-input-row button:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.pullad-scope .chat-input-row button:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------------- */
+/* Dashboard panel                                                  */
+/* ---------------------------------------------------------------- */
+
+.pullad-scope .dashboard-panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+  min-height: 420px;
+  overflow-y: auto;
+}
+
+@media (min-width: 860px) {
+  .pullad-scope .dashboard-panel {
+    min-height: 0;
+  }
+}
+
+.pullad-scope .dashboard-placeholder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text-muted);
+  gap: 8px;
+  padding: 24px;
+}
+
+.pullad-scope .dashboard-placeholder p {
+  margin: 0;
+  max-width: 34ch;
+}
+
+.pullad-scope .dashboard-placeholder-hint {
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.pullad-scope .dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pullad-scope .dashboard-title {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
