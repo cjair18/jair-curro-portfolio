@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const experience = [
   {
     period: "May 2026 – Present",
@@ -68,23 +66,6 @@ export default function Work() {
   return (
     <>
       <section className="section" style={{ paddingTop: "5.5rem" }}>
-        <div className="container">
-          <p className="eyebrow">Live prototype</p>
-          <h2 className="section-title">PullAd AI</h2>
-          <p className="section-sub">
-            A working, interactive prototype of a conversational
-            marketing-analytics assistant — ask plain-English questions about
-            ad spend and see how it connects to sales, with dashboards
-            generated from the conversation. Built with React, Vite, and
-            Recharts on fully mocked data.
-          </p>
-          <Link to="/pullad" className="btn btn-primary">
-            Try the live demo →
-          </Link>
-        </div>
-      </section>
-
-      <section className="section">
         <div className="container">
           <p className="eyebrow">Case studies</p>
           <h2 className="section-title">Product strategy work</h2>
