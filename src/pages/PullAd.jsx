@@ -21,7 +21,7 @@ export default function PullAd() {
           Built with React, Vite, and Recharts. Product brief, requirements,
           and source are on{" "}
           <a
-            href="https://github.com/cjair18/pullad-ai"
+            href="https://github.com/cjair18/pulled-ai"
             target="_blank"
             rel="noreferrer"
             style={{ color: "var(--accent)" }}

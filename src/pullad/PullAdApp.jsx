@@ -15,7 +15,7 @@ const THINKING_DELAY_MS = 450;
 
 /**
  * PullAd AI prototype, embedded from the standalone repo
- * (github.com/cjair18/pullad-ai). All data is mocked and the reasoning
+ * (github.com/cjair18/pulled-ai). All data is mocked and the reasoning
  * layer is scripted — zero live API calls, by design.
  */
 export default function PullAdApp() {
