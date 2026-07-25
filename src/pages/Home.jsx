@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 
-const targetRoles = [
-  "AI Program Associate",
-  "AI Analyst",
-  "AI Associate Product Manager",
-  "Product Manager",
-  "Product Strategy Analyst",
-  "Product Analyst",
-  "Business Analyst",
+const focusAreas = [
+  "Product Strategy",
+  "Marketing Analytics",
+  "AI Products",
+  "Data Storytelling",
+  "User Research",
+  "Business Analysis",
 ];
 
 const highlights = [
@@ -32,7 +31,7 @@ export default function Home() {
         <div className="container">
           <div className="hero-kicker">
             <span className="dot" />
-            Open to Analyst &amp; Associate roles in Product &amp; AI · Miami, FL
+            Product · Data · AI · Miami, FL
           </div>
           <h1>
             Analyst <span className="arrow">→</span> Product
@@ -55,16 +54,16 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <p className="eyebrow">Looking for</p>
-          <h2 className="section-title">Roles I&apos;m targeting</h2>
+          <p className="eyebrow">Focus</p>
+          <h2 className="section-title">Where product thinking meets data</h2>
           <p className="section-sub">
-            Analyst and Associate-level roles where product thinking and data
-            meet.
+            The work I care about sits at the intersection of product
+            strategy, analytics, and AI.
           </p>
           <div className="pill-row">
-            {targetRoles.map((role) => (
-              <span className="pill" key={role}>
-                {role}
+            {focusAreas.map((area) => (
+              <span className="pill" key={area}>
+                {area}
               </span>
             ))}
           </div>

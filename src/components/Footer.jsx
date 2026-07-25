@@ -4,8 +4,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <h2>Let&apos;s connect</h2>
         <p style={{ color: "var(--text-secondary)" }}>
-          Open to Analyst &amp; Associate roles in Product &amp; AI — or just
-          say hi.
+          Always happy to talk product, data, and AI — or just say hi.
         </p>
         <div className="footer-links">
           <a className="btn btn-primary" href="mailto:jair_curro@hotmail.com">
