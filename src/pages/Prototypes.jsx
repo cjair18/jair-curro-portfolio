@@ -10,6 +10,15 @@ const prototypes = [
     demoPath: "/pullad",
     repoUrl: "https://github.com/cjair18/pulled-ai",
   },
+  {
+    label: "AI · E-commerce Sourcing · Live demo",
+    title: "SourceCheck AI",
+    description:
+      "An AI sourcing assistant for Amazon FBA/FBM sellers — scan an ASIN or UPC to get variant-accurate sales data, fee-aware profit math, and a Buy / Don't Buy verdict. Runs in mock-data mode with realistic Keepa-shaped fixtures and a rule-based verdict engine.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "API Design", "Mock Data"],
+    demoUrl: "https://sourcecheck-ai.vercel.app",
+    repoUrl: "https://github.com/cjair18/sourcecheck-ai",
+  },
 ];
 
 export default function Prototypes() {
@@ -37,9 +46,20 @@ export default function Prototypes() {
                 ))}
               </div>
               <div className="hero-actions" style={{ marginTop: "0.5rem" }}>
-                <Link to={p.demoPath} className="btn btn-primary">
-                  Launch demo →
-                </Link>
+                {p.demoPath ? (
+                  <Link to={p.demoPath} className="btn btn-primary">
+                    Launch demo →
+                  </Link>
+                ) : (
+                  <a
+                    href={p.demoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Launch demo ↗
+                  </a>
+                )}
                 <a
                   href={p.repoUrl}
                   target="_blank"
