@@ -29,12 +29,12 @@ export default function About() {
           </p>
           <div style={{ maxWidth: 720, color: "var(--text-secondary)" }}>
             <p style={{ marginBottom: "1rem" }}>
-              My foundation is in data. At Amerant Bank I analyze marketing and
-              campaign performance; at Norwegian Cruise Line I worked with
-              sales and revenue data; and at Archangel Education &amp;
-              Technology I supported product development on a device
-              management SaaS, collaborating with design, engineering, and
-              executive leadership.
+              My foundation is in data. At Amerant Bank I build campaign
+              performance reports and support A/B testing; at Norwegian Cruise
+              Line I worked with sales and customer engagement data; and at
+              Archangel Education &amp; Technology I supported Product &amp; AI
+              as a Business Analyst Intern — including structured data work to
+              train FinAI as a customer-facing support agent.
             </p>
             <p style={{ marginBottom: "1rem" }}>
               Product management sits at the intersection of what I do best —

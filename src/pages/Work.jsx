@@ -4,24 +4,22 @@ const experience = [
     role: "Analyst Intern — Marketing & Research",
     org: "Amerant Bank · Miami, FL",
     bullets: [
-      "Analyze website and campaign performance data — including a HELOC marketing campaign — to support data-driven decisions",
-      "Track paid media metrics such as CPC and ROAS to evaluate campaign efficiency",
-      "Support A/B testing efforts aimed at improving user experience and engagement",
-      "Partner with marketing and web teams to optimize content and digital performance",
+      "Gathered and documented requirements for a client survey program, translating stakeholder needs into workflows",
+      "Built campaign performance reports in GA4 and Looker Studio, defining KPIs that guided launch decisions",
+      "Partnered with cross-functional stakeholders to align on requirements and ran A/B tests to improve landing page conversion",
     ],
-    tags: ["Google Analytics", "A/B Testing", "CPC / ROAS", "Campaign Analysis"],
+    tags: ["GA4", "Looker Studio", "Requirements Gathering", "A/B Testing"],
   },
   {
     period: "Aug 2025 – May 2026",
-    role: "Analyst Intern — Product",
+    role: "Business Analyst Intern — Product & AI",
     org: "Archangel Education & Technology · Miami, FL",
     bullets: [
-      "Contributed to a device management SaaS product, working directly with the UX/UI designer, business analyst, CIO, and CEO",
-      "Translated business needs into product improvements and helped drive execution",
-      "Supported testing, iteration, and feature tracking in an Agile environment",
-      "Helped prioritize features based on business needs and user feedback",
+      "Drafted structured data documentation to train and feed FinAI, enabling API integration as a customer-facing support agent",
+      "Partnered with leadership and engineering to translate business needs into product improvements, supporting testing, iteration, and feature tracking in an Agile environment",
+      "Collaborated cross-functionally to prioritize features and support product decisions based on business needs and user feedback",
     ],
-    tags: ["Agile", "Feature Prioritization", "SaaS", "Cross-functional"],
+    tags: ["FinAI", "Agile", "Feature Prioritization", "Product & AI"],
   },
   {
     period: "Nov 2023 – Jan 2024",
@@ -29,11 +27,10 @@ const experience = [
     org: "Norwegian Cruise Line · Miami, FL",
     bullets: [
       "Analyzed booking behavior to support repeat business and increase revenue per client",
-      "Worked with sales data — profit, revenue, margin, and cost — to track performance",
-      "Used Salesforce, Excel, and SQL to monitor sales and customer engagement trends",
+      "Used Salesforce, Excel, and basic SQL to track sales performance and customer engagement trends",
       "Identified opportunities to improve client retention through data-driven outreach",
     ],
-    tags: ["SQL", "Salesforce", "Excel", "Revenue Analysis"],
+    tags: ["SQL", "Salesforce", "Excel", "Customer Retention"],
   },
 ];
 
@@ -109,7 +106,7 @@ export default function Work() {
           <h2 className="section-title">Where I&apos;ve worked</h2>
           <div>
             {experience.map((xp) => (
-              <div className="xp-item" key={xp.role}>
+              <div className="xp-item" key={`${xp.org}-${xp.role}`}>
                 <div className="xp-period">{xp.period}</div>
                 <div className="xp-body">
                   <h3>{xp.role}</h3>

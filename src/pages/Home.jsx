@@ -12,11 +12,11 @@ const focusAreas = [
 const highlights = [
   {
     title: "Marketing & Research — Amerant Bank",
-    text: "Analyzing HELOC campaign performance (CPC, ROAS) and supporting A/B testing to improve digital engagement.",
+    text: "Building campaign performance reports in GA4 and Looker Studio, gathering survey requirements, and running A/B tests to improve landing page conversion.",
   },
   {
-    title: "Product — Archangel Education & Technology",
-    text: "Contributed to a device management SaaS in an Agile team alongside the UX/UI designer, business analyst, CIO, and CEO.",
+    title: "Product & AI — Archangel Education & Technology",
+    text: "Business Analyst Intern supporting FinAI — structured data documentation for a customer-facing AI support agent, plus Agile feature prioritization with leadership and engineering.",
   },
   {
     title: "PM Case Studies — Instacart & Blackstone",

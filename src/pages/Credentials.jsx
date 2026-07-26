@@ -55,7 +55,7 @@ const skillGroups = [
       "Tableau",
       "Excel",
       "Google Analytics",
-      "Data Studio",
+      "Data Studio / Looker Studio",
       "Qualtrics",
       "Salesforce",
     ],
