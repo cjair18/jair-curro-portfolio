@@ -12,11 +12,11 @@ const focusAreas = [
 const highlights = [
   {
     title: "Marketing & Research — Amerant Bank",
-    text: "Building campaign performance reports in GA4 and Looker Studio, gathering survey requirements, and running A/B tests to improve landing page conversion.",
+    text: "Built a Google Ads + GA4 campaign dashboard in Data Studio, gathered survey product specs, and led Qualtrics research with A/B tests to improve landing page conversion.",
   },
   {
     title: "Product & AI — Archangel Education & Technology",
-    text: "Business Analyst Intern supporting FinAI — structured data documentation for a customer-facing AI support agent, plus Agile feature prioritization with leadership and engineering.",
+    text: "Business Analyst Intern supporting FinAI — structured data documentation for an API-based AI support agent, plus Agile roadmap prioritization with leadership and engineering.",
   },
   {
     title: "PM Case Studies — Instacart & Blackstone",
